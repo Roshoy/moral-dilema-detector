@@ -20,13 +20,7 @@ public class Main {
     public static final String baseIRI = "http://webprotege.stanford.edu/";
 
     public static Model getModelFromGenerator(MyFactory factory) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
-        BaseScenarioGenerator generator;
-        generator = new AnimalOnRoadSG(factory, baseIRI);
-//        generator = new CarApproachingSG(factory, baseIRI);
-//        generator = new CarOvertakingSG(factory, baseIRI);
-//        generator = new ObstacleOnRoadSG(factory, baseIRI);
-//        generator = new PedestrianIllegallyCrossingSG(factory, baseIRI);
-//        generator = new PedestrianOnCrosswalkSG(factory, baseIRI);
+        BaseScenarioGenerator generator = new BaseScenarioGenerator(factory, baseIRI);
         Model model = generator.generate();
         DecisionGenerator decisionGenerator = new DecisionGenerator(factory, baseIRI);
         decisionGenerator.generate(model);
@@ -52,7 +46,7 @@ public class Main {
                 //.addModule(new MaterialValueModule(factory))
                 .build();
 
-        for(int i=0; i<5; i++) {
+        for (int i = 0; i < 5; i++) {
             Model scenarioModel = getModelFromGenerator(factory);
             consequenceGenerator.predict(scenarioModel);
             System.out.println(scenarioModel.getScenario().getOwlIndividual());
@@ -66,6 +60,6 @@ public class Main {
         SQWRLQueryEngine queryEngine = SWRLAPIFactory.createSQWRLQueryEngine(ontology);
 
         // Create and execute a SQWRL query using the SWRLAPI
-        SQWRLResult result = queryEngine.runSQWRLQuery("q1","webprotege:scenario(?s) -> sqwrl:select(?s)");
+        SQWRLResult result = queryEngine.runSQWRLQuery("q1", "webprotege:scenario(?s) -> sqwrl:select(?s)");
     }
 }

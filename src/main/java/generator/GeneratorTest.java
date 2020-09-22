@@ -28,10 +28,10 @@ public class GeneratorTest {
         MyFactory factory = new MyFactory(ontology);
         String baseIRI = "http://webprotege.stanford.edu/";
 
-        BaseScenarioGenerator generator = new AnimalOnRoadSG(factory, baseIRI);
-        DecisionGenerator decisionGenerator = new DecisionGenerator(factory, baseIRI);
-        Model model = generator.generate();
-        decisionGenerator.generate(model);
-        factory.saveOwlOntology();
+//        BaseScenarioGenerator generator = new AnimalOnRoadSG(factory, baseIRI);
+//        DecisionGenerator decisionGenerator = new DecisionGenerator(factory, baseIRI);
+//        Model model = generator.generate();
+//        decisionGenerator.generate(model);
+//        factory.saveOwlOntology();
     }
 }
