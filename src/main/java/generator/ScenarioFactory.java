@@ -28,11 +28,10 @@ public class ScenarioFactory {
         modelBuilder.addApproachedVehicle ();
         return this;
     }
-
-    public ScenarioFactory carOvertaking() {
-        modelBuilder.addOvertakenVehicle();
-        return this;
-    }
+//    public ScenarioFactory carOvertaking() {
+//        modelBuilder.addOvertakenVehicle();
+//        return this;
+//    }
 
     // CAR - OBSTACLE SCENARIOS
     public ScenarioFactory obstacleOnRoad() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
