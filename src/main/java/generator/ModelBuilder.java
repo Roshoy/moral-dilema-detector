@@ -1,6 +1,6 @@
 package generator;
 
-import javafx.util.Pair;
+//import javafx.util.Pair;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import project.*;
 
@@ -8,6 +8,25 @@ import java.io.FileNotFoundException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.Random;
+
+class Pair<K, V>{
+    private K key;
+    private V value;
+
+    Pair(K k, V v){
+        key = k;
+        value = v;
+    }
+
+    K getKey(){
+        return key;
+    }
+
+    V getValue(){
+        return value;
+    }
+}
+//test comment
 
 public class ModelBuilder {
     private SizeManager sizeManager;
