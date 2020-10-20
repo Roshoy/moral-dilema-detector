@@ -128,6 +128,7 @@ public class ModelBuilder {
 //        return addVehicle(vehicle, laneNo, distance);
 //    }
 
+
     public ModelBuilder addApproachedVehicle() {
         int r = ProbRand.randInt(new int[]{1, 2, 3, 4}, new double[]{0.6, 0.2, 0.1, 0.1});
         Vehicle vehicle;

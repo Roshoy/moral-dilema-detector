@@ -28,7 +28,6 @@ public class ScenarioFactory {
         modelBuilder.addApproachedVehicle ();
         return this;
     }
-
 //    public ScenarioFactory carOvertaking() {
 //        modelBuilder.addOvertakenVehicle();
 //        return this;

@@ -64,8 +64,6 @@ public class BaseScenarioGenerator {
         addEnvData(model);
         addSurrounding(model);
         addMainVehicle(model);
-//        addVehicles(model);
-//        addAnimals(model);
 
         return model;
     }
